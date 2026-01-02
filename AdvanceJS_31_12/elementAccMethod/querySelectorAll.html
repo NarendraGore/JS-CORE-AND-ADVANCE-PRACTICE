@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuerySelectorAll</title>
+  </head>
+  <body>
+    <h1 class="title">This Document for Get Element By querySelector Method</h1>
+    <h2 id="Heading">Advance JavaScript</h2>
+    <p class="para text">This is a First Para</p>
+    <p class="para text">This is a second Para</p>
+
+    <div class="text">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium,
+      alias.
+      <p class="text">
+        Lorem ipsum dolor sit amet.
+        <span class="span1">Lorem ipsum dolor sit amet.</span>
+        <span class="span2">Lorem ipsum dolor sit amet.</span>
+      </p>
+    </div>
+    <em class="text">This is Italic Content.</em><br />
+
+    <div id="specific">
+      <b id="para">This is para</b><br />
+      <b class="para">This is para</b>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <script>
+      // QuerySelectorAll;
+
+      let result = document.querySelectorAll("p");
+      document.write(result, "<br>");
+      console.log(result);
+
+      // QuerySelectorAll by Class Selector;
+
+      let result1 = document.querySelectorAll(".para");
+      let result2 = document.querySelectorAll("#para");
+      document.write(result1, "<br>");
+      console.log(result1);
+      console.log(result2);
+
+      // QuerySelectorAll by attribute Selector;
+
+      let result3 = document.querySelectorAll("div[id]");
+      document.write(result3, "<br>");
+      console.log(result3);
+
+      let result4 = document.querySelectorAll("div[class = 'text']");
+      document.write(result4, "<br>");
+      console.log(result4);
+
+      //More Specific
+
+      let result5 = document.getElementById("specific");
+      let showdetail = result5.querySelectorAll("b.para");
+      document.write(showdetail,"<br>");
+      console.log(showdetail);
+
+      let result6 = document.querySelectorAll(".text > .text > .span1");
+      console.log(result6);
+      
+      //Length
+
+      let len = document.querySelectorAll(".para").length;
+      document.write(len,"<br>");
+      console.log(len);
+
+      //Method With Loop;
+      let result7 = document.querySelectorAll(".para");
+      let len1 = result7.length;
+      for(let i =0; i<len1; i++){
+        let show = result7[i];
+        console.log(show);
+        document.write(show,"<br>");
+      }
+
+    </script>
+  </body>
+</html>

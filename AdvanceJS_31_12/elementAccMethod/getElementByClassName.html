@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Element By Class Name</title>
+</head>
+<body>
+  <h1 class="Heading">This Document for Get Element By ClassName Method</h1>
+  <h2 class="Heading">Advance JavaScript</h2>
+  <p class="para text">This is a First Para</p>
+  <p class="para text">This is a second Para</p>
+  <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, alias.</div>
+  <em class="text">This is Italic Content.</em><br>
+
+  <div id="specific">
+    <b class="para">This is para</b><br>
+    <b class="para">This is para</b>
+  </div>
+
+
+  <!-- Java Script Content -->
+   <script>
+    //getElemntByClassName;-- Basic
+    let result = document.getElementsByClassName("Heading");
+    //document.write(result);
+    console.log(result);
+
+    let result1 = document.getElementsByClassName("para");
+    console.log(result1);
+
+    let result3 = document.getElementsByClassName("text");
+    console.log(result3);
+
+    let result4 = document.getElementsByClassName("para text")[0];
+    console.log(result4)
+
+    //More specific
+    let result5 = document.getElementById("specific");
+    let para = result5.getElementsByClassName("para")
+    console.log(result5);
+    console.log(para);
+
+    //length
+    //from result 
+    let len = result.length
+    console.log(len);
+    //from result1
+    let len1 = result1.length;
+    document.write(len1+"<br>")
+    console.log(len1);
+
+    //Loop
+    let show = document.getElementsByClassName("para");
+    let leng = show.length;
+    console.log(show[0])
+    console.log(show);
+    console.log(leng);
+
+    for(let i = 0; i<leng; i++){
+      let show1 = show[i];
+      console.log(show1)
+    }
+   </script>
+
+</body>
+</html>

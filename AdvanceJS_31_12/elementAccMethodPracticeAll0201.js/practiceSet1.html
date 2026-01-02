@@ -1,0 +1,79 @@
+<!-- 
+ 1)Create an HTML page with a heading having id="title".
+Access it using getElementById() and change its text.
+
+ 2)Create 3 paragraphs with the same class name info.
+Access all paragraphs using getElementsByClassName() and change their color.
+
+ 3)Create 5 <li> elements.
+Access them using getElementsByTagName() and make the first one bold.
+
+ 4)Create a button with id="btn".
+Access it and disable the button using DOM.
+
+ 5)Create an input field with name="username".
+Access it using getElementsByName() and set a default value. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title">Access Method Practtice Set 1</title>
+  </head>
+  <body>
+    <h1>Practice Set 1</h1>
+    <h2>Get Access Methods Practice</h2>
+    <p class="info">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
+      sapiente asperiores laboriosam quo omnis. Obcaecati.
+    </p>
+    <p class="info">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore,
+      perspiciatis necessitatibus voluptas ipsa fugit quos.
+    </p>
+    <p class="info">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. At minus cumque
+      illum sequi fuga quam?
+    </p>
+    <li>list Item 1</li>
+    <li>list Item 2</li>
+    <li>list Item 3</li>
+    <li>list Item 4</li>
+    <li>list Item 5</li>
+
+    <button id="btn" onclick="myFuncion()">CLick Me</button><br /><br />
+    <label for="username">Enter your username:</label>
+    <input type="text" name="username" />
+
+    <script>
+      //Javascript
+      //Changing the title
+      let title = (document.getElementById("title").innerHTML =
+        "Practice Set 1 ");
+      console.log(title);
+
+      //Changing The Color of Para;
+      let para = document.getElementsByClassName("info");
+      let len = para.length;
+      for (let i = 0; i < len; i++) {
+        para[i].style.color = "orange";
+      }
+
+      //Making text Bold pof list items;
+      let items = document.getElementsByTagName("li");
+      items[0].style.fontWeight = "bold";
+
+      //Disable a button using id;
+
+      function myFuncion() {
+        document.getElementById("btn").disabled = "true";
+      }
+
+      //Setting default value to UserName;
+      let user = document.getElementsByName("username");
+      console.log(user);
+      user.value = "ABC";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html id="headid">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ParentNode and paretnElement</title>
+  </head>
+  <body>
+    <p id="myid">This is a Paragraph</p>
+    <p id="myid1">This is a second Pargraph</p>
+    <div class="myClass">This is a div element</div>
+
+    <script>
+      let result = document.getElementById("myid");
+      let parent = result.parentNode;
+      console.log(parent);
+      let pElement = result.parentElement;
+      console.log(pElement);
+      //parentElement =  it returns null if parent is not an element;
+      let result1 = document.getElementById("headid");
+      let showparent = result1.parentNode;
+      console.log(showparent);
+      let showparent1 = result1.parentElement
+      console.log(showparent1);
+    </script>
+  </body>
+</html>

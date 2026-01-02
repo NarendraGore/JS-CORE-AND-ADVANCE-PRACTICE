@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attributes Practice</title>
+</head>
+<body>
+  <div id="myid" class="myClass">This is a div</div>
+  <p id="myid1" class="myClass">This is a para</p>
+
+  <script>
+    let result = document.getElementById("myid");
+    let len = result.attributes.length;
+    console.log(len);
+    document.write(len,"<br>");
+    document.write(result.attributes[0].nodeName,"=");
+    document.write(result.attributes[0].nodeValue,"<br>");
+    document.write(result.attributes[1].nodeName,"=");
+    document.write(result.attributes[1].nodeValue,"<br>");
+
+
+
+
+    for(let i=0; i<len; i++){
+      document.write(result.attributes[i].name,"=");
+      document.write(result.attributes[i].value,"<br>")
+    }
+  </script>
+</body>
+</html>

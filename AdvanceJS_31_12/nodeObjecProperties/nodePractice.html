@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node Object Properties Practice</title>
+</head>
+<body>
+  <h1 id="myid">
+    This is Heading
+    <!-- This is a Comment -->
+  </h1>
+  <p id="myid1">This is Paragraph</p>
+
+
+  <script>
+    document.write("<-------Element ---------> <br><br>")
+    let txt = document.getElementById("myid")
+    document.write(txt.nodeName,"<br>");
+    document.write(txt.nodeType,"<br>");
+    document.write(txt.nodeValue,"<br>");
+    console.log(txt.nodeName);
+    console.log(txt.nodeType);
+    console.log(txt.nodeValue);
+
+    document.write("<br><br> <-----------Document-----------><br><br>");
+     document.write(document.nodeName,"<br>");
+     document.write(document.nodeType,"<br>");
+     document.write(document.nodeValue,"<br>");
+     console.log(document.nodeName);
+     console.log(document.nodeType);
+     console.log(document.nodeValue);
+
+     document.write("<br><br><-----------Text-----------><br><br>")
+     let ele = document.getElementById("myid");
+     document.write(ele.firstChild.nodeName,"<br><br>");
+     document.write(ele.firstChild.nodeType,"<br><br>");
+     document.write(ele.firstChild.nodeValue,"<br><br>");
+     console.log(ele.firstChild.nodeName);
+     console.log(ele.firstChild.nodeType);
+     console.log(ele.firstChild.nodeValue);
+
+      document.write("<br><br><-----------Comment-----------><br><br>")
+     let comm = document.getElementById("myid");
+     document.write(comm.firstChild.nextSibling.nodeName,"<br><br>");
+     document.write(comm.firstChild.nextSibling.nodeType,"<br><br>");
+     document.write(comm.firstChild.nextSibling.nodeValue,"<br><br>");
+     console.log(comm.firstChild.nextSibling.nodeName);
+     console.log(comm.firstChild.nextSibling.nodeType);
+     console.log(comm.firstChild.nextSibling.nodeValue);
+
+
+  </script>
+</body>
+</html>

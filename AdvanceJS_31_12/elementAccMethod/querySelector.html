@@ -1,0 +1,38 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUery Selector</title>
+  </head>
+  <body>
+    <h1 class="title">This Document for Get Element By querySelector Method</h1>
+    <h2 id="Heading">Advance JavaScript</h2>
+    <p class="para text">This is a First Para</p>
+    <p class="para text">This is a second Para</p>
+    <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, alias.</div>
+    <em class="text">This is Italic Content.</em><br>
+
+    <div id="specific">
+      <b id="para">This is para</b><br>
+      <b class="para">This is para</b>
+    </div>
+
+    <script>
+      //Query Selector
+      let result = document.querySelector("b")
+      console.log(result);
+      // query id selector
+      let result1 = document.querySelector("#Heading, #specific")
+      console.log(result1);
+
+      //query class selector;
+      
+      let result2 = document.querySelector(".title, .Heading ")
+      console.log(result2);
+
+
+
+    </script>
+  </body>
+  </html>

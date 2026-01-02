@@ -1,0 +1,141 @@
+<!-- 
+1)Create multiple elements with class box.
+Access only the first box using querySelector() and change its background color.
+
+2)Create 4 buttons with class action.
+Access all buttons using querySelectorAll() and change their text.
+
+3)Create a div containing multiple <p> tags.
+Access all <p> tags inside the div using querySelectorAll().
+
+4)Create an unordered list with class menu.
+Access all list items inside it using a CSS selector.
+
+5)Count the total number of <input> elements on the page using DOM. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Set 2</title>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+      placeat, aliquid perspiciatis eius odio magni.
+    </div>
+    <p class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ullam
+      mollitia eligendi excepturi, provident nemo?
+    </p>
+    <p class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+      obcaecati tenetur suscipit, exercitationem error atque!
+    </p>
+    <p class="box">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate iste
+      inventore porro ducimus vitae saepe!
+    </p>
+    <div class="box">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores autem
+      mollitia, pariatur similique ut soluta.
+    </div>
+    <span class="box"
+      >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit
+      necessitatibus facere labore explicabo nihil accusamus?
+    </span>
+    <br /><br />
+    <buttton class="action">Click Me</buttton><br />
+    <buttton class="action">Click Me</buttton><br />
+    <buttton class="action">Click Me</buttton><br />
+    <buttton class="action">Click Me</buttton><br />
+
+    <div id="para">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem est
+        molestiae omnis eos. Accusantium, laboriosam!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem est
+        molestiae omnis eos. Accusantium, laboriosam!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem est
+        molestiae omnis eos. Accusantium, laboriosam!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem est
+        molestiae omnis eos. Accusantium, laboriosam!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem est
+        molestiae omnis eos. Accusantium, laboriosam!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem est
+        molestiae omnis eos. Accusantium, laboriosam!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem est
+        molestiae omnis eos. Accusantium, laboriosam!
+      </p>
+    </div>
+
+    <ul class="menu">
+      <li>list Item 1</li>
+      <li>list Item 2</li>
+      <li>list Item 3</li>
+      <li>list Item 4</li>
+      <li>list Item 5</li>
+    </ul>
+
+    input1 <input type="text" ><br>
+    input2<input type="text" ><br>
+    input3<input type="text" ><br>
+    input4<input type="text" ><br>
+    input5<input type="text" ><br>
+
+    <script>
+      //JavaScript
+      //Changing the color using querySelector;
+      document.querySelector(".box").style.backgroundColor = "red";
+
+      //Changing the button text using querySelectorAll;
+      let text = document.querySelectorAll(".action");
+      let len = text.length;
+      for (let i = 0; i < len; i++) {
+        text[i].innerHTML = "Click to Check";
+      }
+
+      //Accesing Inside a Div Tag;
+      let pTag = document.getElementById("para");
+      let accessP = pTag.getElementsByTagName("p");
+      console.log(accessP);
+      let len1 = accessP.length;
+      console.log(len1);
+      for (let i = 0; i < len1; i++) {
+        let show = accessP[i];
+        console.log(show);
+      }
+
+      //Accesing Unordered List;
+
+      let list = document.querySelectorAll(".menu li");
+      console.log(list);
+      let listLen = list.length;
+      console.log(listLen);
+      for (let i = 0; i < listLen; i++) {
+        console.log(list[i]);
+      }
+
+      //Counting Number of Input Elements;
+      let inputs = document.getElementsByTagName("input");
+      let inpLen = inputs.length;
+      console.log(inpLen);
+      for(let i =0; i<inpLen; i++){
+        console.log(inputs[i])
+      }
+    </script>
+  </body>
+</html>

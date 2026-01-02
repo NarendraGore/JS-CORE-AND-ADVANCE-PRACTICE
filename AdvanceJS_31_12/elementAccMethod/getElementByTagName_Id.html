@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Element Access Methods</title>
+  </head>
+  <body>
+    <h1>Advace JavaScript Practice</h1>
+    <h2>Element Access Methods</h2>
+    <p id="method">Get Element By Id</p>
+    <p id="greet">Hello</p>
+    <br />
+
+    <p class="demo">Demo</p>
+
+    <div class="tags">
+      <p>This is paragraph</p>
+      <em>This is Italic text</em>
+      <p>This is a second Paragraph</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <script>
+      //getElementById
+      let result = (document.getElementById("greet").innerHTML =
+        "Good Morning");
+      // document.write(result);
+      //console.log(result);
+
+      //getElementByClassName
+      let result1 = (document.getElementsByClassName("demo")[0].innerHTML =
+        "Demo Page ");
+      console.log(result1);
+
+      //getElementByTagName
+      let result2 = document.body.getElementsByTagName("*")[0];
+      console.log(result2);
+
+      for (let i = 0; i < result2.length; i++) {
+        result2[i].innerHTML = "Hello";
+      }
+
+      //More Specific for getElementByTagName
+
+      let getP = document.getElementsByClassName("tags")[0];
+      console.log(getP);
+      let result3 = getP.getElementsByTagName("p");
+      console.log(result3);
+      for (let i = 0; i < result3.length; i++) {
+        result3[i].innerHTML = "Hello";
+      }
+
+      //length
+      let len = result3.length;
+      console.log(len);
+      document.writeln(len);
+
+      //for Of Loop
+     
+
+     
+
+      let total = document.body.getElementsByTagName("*");
+      console.log(total);
+      for (let key of total) {
+        console.log(key);
+        //  document.write(key + "<br>");
+        let text = (key.textContent = "Hello");
+      }
+    </script>
+  </body>
+</html>
