@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creating Nodes</title>
+</head>
+<body>
+  <div class="myDiv">
+    <p id="myid">This is Parqagraph.</p>
+    <p class="myclass">This is second Para</p>
+  </div>
+  <script>
+    let nENode = document.createElement("h1")
+    console.log(nENode);
+    let nTNode = document.createTextNode("This is Text");
+    console.log(nTNode);
+    let nCNode = document.createComment("This is comment");
+    console.log(nCNode)
+  </script>
+</body>
+</html>

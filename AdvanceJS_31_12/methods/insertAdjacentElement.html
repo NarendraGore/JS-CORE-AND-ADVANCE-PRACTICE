@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Adjacent Element</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <p id="myId">This is Paragraph</p>
+      <p class="myclass1">This is second paragraph</p>
+    </div>
+
+    <script>
+      //insertAdjacentElement() Method;
+      let div = document.getElementById("myDiv");
+
+      let myPara = document.getElementById("myId");
+      let newElement = document.createElement("h2");
+      newElement.innerText = "This is Heading";
+
+      let newElement1 = document.createElement("h3");
+      newElement1.innerText = "This is Heading 3";
+
+
+      myPara.insertAdjacentElement("beforebegin", newElement);
+      myPara.insertAdjacentElement("afterbegin", newElement);
+      myPara.insertAdjacentElement("beforeend", newElement);
+      myPara.insertAdjacentHTML("afterend", newElement1);
+      console.log(div);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Append Node</title>
+</head>
+<body>
+  <div class="myDiv">
+    <p class="myClass">This is Paragraph</p>
+    <p class="myclass1">This is second Paragraph</p>
+  </div>
+
+
+  <script>
+    let targetNode = document.getElementsByClassName("myDiv")[0];
+    console.log(targetNode);
+    let nENode = document.createElement("h2")
+    nENode.innerText = "This is Heading"
+    targetNode.appendChild(nENode);
+    console.log(targetNode); 
+
+  </script>
+  
+</body>
+</html>

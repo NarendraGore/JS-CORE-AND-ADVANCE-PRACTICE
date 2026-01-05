@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Append Text Node</title>
+  </head>
+  <body>
+    <div class="myDiv">
+      <p class="para">This is Paragraph</p>
+      <p class="para1">This is Second Paragraph</p>
+    </div>
+    <div class="myClass">
+      <p class="mypara">This is Paragraph</p>
+      <p class="mypara1">This is second Para</p>
+    </div>
+
+    <script>
+      let targetNode = document.getElementsByClassName("myDiv")[0];
+      //console.log(targetNode);
+
+      //creating text node
+      let nTNode = document.createTextNode("This is Text");
+      targetNode.appendChild(nTNode);
+      //console.log(targetNode);
+
+      //creating comment Node;
+      let nCNode = document.createComment("This is Comment");
+      targetNode.appendChild(nCNode);
+      //console.log(nCNode);
+
+      //Creating Element Node
+      let nENode1 = document.createElement("h2");
+
+      //creating Text Node
+      let nTNode1 = document.createTextNode("This is text");
+
+      //creating Comment Node
+      let nCNode1 = document.createComment("This is Comment");
+
+      nENode1.appendChild(nTNode1);
+      nENode1.appendChild(nCNode1);
+
+      let targetNode1 = document.getElementsByClassName("myClass")[0];
+      targetNode1.appendChild(nENode1);
+      console.log(targetNode1)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child and Sibling element</title>
+  </head>
+  <body>
+    <div class="myClass">
+      <p class="myclass1">Lorem ipsum dolor sit amet.</p>
+      <!--Prvious-->
+      <p class="myclass2">Lorem ipsum dolor sit amet.</p>
+
+    </div>
+
+    <div class="myclass3">
+      <p id="myid">Lorem ipsum dolor sit amet.</p>
+      <p id="myid1">Lorem ipsum dolor sit amet.</p>
+
+    </div>
+    <div class="myDiv"></div>
+
+    <script>
+      //Javascript;
+      //Child node & children
+      let result = document.body.getElementsByClassName("myClass")[0];
+      console.log(result);
+      //Child nodes with comment and text
+      let childNode = result.childNodes;
+      console.log(childNode);
+      //child node with only element
+      let childElement = result.children;
+      console.log(childElement);
+
+      //firstChild node and Elements
+      //firstChildNode
+      let firstChilNode = result.firstChild;
+      console.log(firstChilNode);
+
+      let result1 = document.getElementsByClassName("myDiv")[0];
+      let nullNode = result1.firstChild;
+      console.log(nullNode);
+      //firstChildElement;
+      let firstElement = result.firstElementChild;
+      console.log(firstElement);
+      let nullElement = result1.firstElementChild;
+      console.log(nullElement);
+
+      //parent Element and node;
+      console.log("parent")
+      let parenNode = result.parentNode;
+      console.log(parenNode);
+      let parentElement = result.parentElement;
+      console.log(parentElement);
+
+      //lastChilde and LastChildElement
+      let lastChilde = result.lastChild;
+      console.log("last Child");
+      console.log(lastChilde);
+      let LastChildElement = result.lastElementChild;
+      console.log("Last Element Child");
+      console.log(LastChildElement);
+
+      //previousSibling and PreviousElementSibling
+
+      let previousSibling = lastChilde.previousSibling;
+      console.log("previous Sibling");
+      console.log(previousSibling);
+      let prvviousEle = result.previousElementSibling;
+      console.log(prvviousEle);
+
+      //nextSibling and NextSiblingElement ;
+      let nextNode = result.nextSibling;
+      console.log("Next Sibling");
+      console.log(nextNode);
+      let nextElement = result.nextElementSibling;
+      console.log(nextElement) 
+
+</script
+  </body>
+</html>

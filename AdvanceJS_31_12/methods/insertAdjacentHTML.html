@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Adjacent HTML</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <br><p id="para"><br>This is Para <br></p><br>
+      <p id="para1">This is second Para</p>
+    </div>
+
+    <script>
+      //access parent node
+      let parentNode = document.getElementById("myDiv");
+      //access target element
+      let targetNode = document.getElementById("para");
+      //creating HTML element
+      let nEle = "<span>This is span Tag</span>";
+      targetNode.insertAdjacentHTML('beforebegin',nEle);
+      targetNode.insertAdjacentHTML('afterbegin',nEle);
+      targetNode.insertAdjacentHTML('beforeend',nEle);
+      targetNode.insertAdjacentHTML('afterend',nEle);
+
+
+      console.log(parentNode)
+   </script>
+  </body>
+</html>

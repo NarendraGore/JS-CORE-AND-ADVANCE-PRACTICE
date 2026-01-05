@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Style Declaration</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <p id="para" style="font-size: 30px; background-color: blueviolet; color: white !important;">
+        This is a Paragraph
+      </p>
+    </div>
+
+    <script>
+      //access element
+      let target = document.getElementById("para");
+      console.log(target);
+      let cs = target.style;
+      //cs.cssText = "background-color:red"
+
+      console.log(cs[1]);
+
+      let propValue = cs.getPropertyValue("font-size");
+      console.log(propValue);
+
+      cs.removeProperty("color");
+      console.log(cs);
+
+      cs.setProperty('font-size','50px', 'important');
+      let propPriority = cs.getPropertyPriority('font-size');
+      console.log(propPriority)
+
+    </script>
+  </body>
+</html>

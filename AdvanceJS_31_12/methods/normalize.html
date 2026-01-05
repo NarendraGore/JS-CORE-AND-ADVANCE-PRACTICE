@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normalize Method</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+
+  <script>
+    //access target Node
+    let targetNode = document.getElementById("myDiv");
+
+    //create Text Node
+    targetNode.appendChild(document.createTextNode("This"));
+    //create second text Node
+    targetNode.appendChild(document.createTextNode(" is a"));
+    //create third text node
+    targetNode.appendChild(document.createTextNode(" paragraph"));
+
+    targetNode.normalize()
+
+    console.log(targetNode);
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class List Property</title>
+    <style>
+      .myClass {
+        background-color: red;
+        color: azure;
+        font-size: 50px;
+      }
+      .myClass1 {
+        background-color: blueviolet;
+        color: azure;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div" class="myClass myClass1">This is a div</div>
+
+    <script>
+      //access target element
+      let div = document.getElementById("div");
+      console.log(div);
+      let classlist = div.classList;
+      console.log(classlist);
+      //Properties
+      console.log(classlist.length);
+      console.log(classlist.value);
+
+      //Methods
+      classlist.add("class1", "class2");
+      console.log(classlist);
+      classlist.remove("class2");
+      console.log(classlist);
+      classlist.replace("class2","class1");
+      console.log(classlist);
+      console.log(classlist.contains("class1"));
+      classlist.toggle("myClass");
+      classlist.toggle("myClass")
+    </script>
+  </body>
+</html>
