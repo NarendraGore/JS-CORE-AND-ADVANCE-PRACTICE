@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AddEventListener & removeEventListener</title>
+</head>
+<body>
+  <h3>Event Listener</h3>
+  <h2>Add Event Listener</h2>
+  
+  <button id="mybtnn">Click Me</button>
+
+  <script>
+    // add event listener
+    function show(){
+      alert("Button Clicked");
+      console.log("Button Clicked")
+    }
+
+    let btn = document.getElementById("mybtnn");
+   btn.addEventListener("click", show);
+   btn.removeEventListener("click", show);
+
+   
+   // btn.addEventListener("click", function(){alert("button Clicked")});
+    //btn.removeEventListener("click", function(){alert("button Clicked")});
+
+    
+
+
+  </script>
+</body>
+</html>

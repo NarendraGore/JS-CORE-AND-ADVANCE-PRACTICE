@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mask Number</title>
+</head>
+<body>
+  <h4>Mask a Number</h4>
+  <label for="num"> Enter a Number</label>
+  <input type="tel" placeholder="Enter your number"  id="num">
+  <button type="button" onclick="getValue()">Submit</button><br><br>
+
+  <span id="number" style="background-color: crimson;"></span>
+
+
+  <script>
+    function getValue(){
+      let input = document.getElementById("num");
+      let number =  input.value;
+      console.log(number)
+      let str = number.toString();
+      let mask = str.slice(0,2)+"******"+str.slice(-2);
+      console.log(mask)
+
+      document.getElementById("number").innerHTML = `Masked Number :${mask}`
+
+    }
+  </script>
+</body>
+</html>

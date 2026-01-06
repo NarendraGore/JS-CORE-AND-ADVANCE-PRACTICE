@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Form</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="formCard">
+      <h2>User Details</h2>
+
+      <form onsubmit="showPopUp(event)">
+        <label>First Name:</label>
+        <input type="text " id="firstName" required /><br /><br />
+
+        <label>Middle Name:</label>
+        <input type="text" id="midName" /><br /><br />
+
+        <label>Last Name:</label>
+        <input type="text" id="lastName" /><br /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Code for Pop Up Window -->
+
+    <div id="layer" class="layer" >
+      <div class="popMsg">
+        <h3>Form Submitted SuccessFully...!</h3>
+        <p><b>First Name:</b> <span id="popFName"></span></p>
+        <p><b>Middle Name:</b> <span id="popMName"></span></p>
+        <p><b>Last Name:</b> <span id="popLName"></span></p>
+
+        <button onclick="closePopUp()">OK</button>
+      </div>
+    </div>
+
+    <script>
+      function showPopUp(event) {
+        event.preventDefault()
+        //Accessing first Name and assigning for pop Window
+        let firstName = document.getElementById("firstName").value;
+        document.getElementById("popFName").textContent = firstName;
+
+        //Accessing Middle Name and assigning for pop Window
+        let midName = document.getElementById("midName").value;
+        document.getElementById("popMName").textContent = midName;
+
+        //Accessing Last Name and assigning for pop Window
+        let lastName = document.getElementById("lastName").value;
+        document.getElementById("popLName").textContent = lastName;
+        document.getElementById("layer").style.display = "block"
+      }
+      function closePopUp(){
+        document.getElementById("layer").style.display="none"
+      }
+    </script>
+  </body>
+</html>

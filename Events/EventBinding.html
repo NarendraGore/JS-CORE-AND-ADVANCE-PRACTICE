@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Binding in HTML & JS</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <h4 style="font-style: italic">Event Binding in HTML</h4>
+      <!-- Event Binding In HTML -->
+      <button type=" button" style="font-style: italic" onclick="disp()">
+        Click Me</button
+      ><br /><br />
+      <hr />
+      <br /><br />
+
+      <!-- Event Binding In JavaScript -->
+      
+      <button id="mybtnn" type="button" style="font-style: italic;">Click Me</button>
+    </div>
+
+    <script>
+      //Event Binding In HTML;
+      function disp() {
+        alert("Event Binding in HTML");
+      }
+
+      //Event Binding in Javascript;
+
+      let btn = document.getElementById("mybtnn");
+      // btn.onclick = function() {
+      //   alert("button Clicked1")}
+
+      btn.onclick = disp1
+        function disp1(){
+          alert("Event Binding in JavaScript");
+        }
+    </script>
+  </body>
+</html>
