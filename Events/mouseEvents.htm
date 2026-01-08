@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Events</title>
+  <style>
+    #mydiv{
+      width: 250px;
+      height: 250px;
+      background-color: red;
+    }
+     #mydiv2{
+      width: 150px;
+      height: 150px;
+      background-color: rgb(102, 69, 69);
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div id="mydiv">
+    <div id="mydiv2"></div>
+  </div>
+
+  <script>
+    let div1 = document.getElementById("mydiv");
+    let div2 = document.getElementById("mydiv2");
+
+    //MouseEvents
+    function eTypes(e){
+      console.log(e.type)
+    }
+    div1.addEventListener("mousedown", eTypes, false);
+    div1.addEventListener("mouseup", eTypes, false);
+    div1.addEventListener("click", eTypes, false);
+    div1.addEventListener("dblclick", eTypes, false);
+    div2.addEventListener("mousedown", eTypes, false);
+    div2.addEventListener("mouseup", eTypes, false);
+    div2.addEventListener("click", eTypes, false);
+    div2.addEventListener("dblclick", eTypes, false);
+    div2.addEventListener("mouseenter", eTypes, false);
+    div2.addEventListener("mouseleave", eTypes, false);
+    div2.addEventListener("mouseover", eTypes, false);
+    div1.addEventListener("mouseover", eTypes, false);
+    div2.addEventListener("mouseenter", eTypes, false);
+    div1.addEventListener("mouseenter", eTypes, false);
+    div2.addEventListener("mousemove", eTypes, false);
+    div2.addEventListener("contextmenu", eTypes, false);
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

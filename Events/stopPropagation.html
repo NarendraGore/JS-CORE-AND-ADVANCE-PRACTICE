@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #myid1 {
+        width: 500px;
+        height: 500px;
+        background-color: chartreuse;
+      }
+      #myid2 {
+        width: 350px;
+        height: 350px;
+        background-color: rgb(253, 233, 54);
+      }
+       #myid3 {
+        width: 250px;
+        height: 250px;
+        background-color: rgb(253, 117, 54);
+      }
+       #myid4 {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(54, 163, 253);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myid1">
+      1
+      <div id="myid2">
+        2
+        <div id="myid3">
+          3
+          <div id="myid4">4</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //access elements
+
+      let id1 = document.getElementById("myid1");
+      let id2 = document.getElementById("myid2");
+      let id3 = document.getElementById("myid3");
+      let id4 = document.getElementById("myid4");
+
+
+      function div1 (e){
+        this.style.backgroundColor = "red"
+        e.stopPropagation()
+      }
+       function div2 (e){
+        this.style.backgroundColor = "blue"
+          e.stopImmediatePropagation()
+      }
+       function div2_2 (e){
+        this.style.width = "450px"
+      } 
+      function div3 (e){
+        this.style.backgroundColor = "gray"
+      } 
+      function div4 (e){
+        this.style.backgroundColor = "pink"
+      }
+      //bubbling Phase
+      id1.addEventListener("click", div1, false);
+      id2.addEventListener("click", div2, false);
+      id2.addEventListener("click", div2_2, false);
+
+      id3.addEventListener("click", div3, false);
+      id4.addEventListener("click", div4, false);
+
+      //Capturing Phase
+      //  id1.addEventListener("click", function(){console.log("1")}, true);
+      // id2.addEventListener("click", function(){console.log("2")}, true);
+      // id3.addEventListener("click", function(){console.log("3")}, true);
+      // id4.addEventListener("click", function(){console.log("4")}, true);
+
+      
+
+    </script>
+  </body>
+</html>

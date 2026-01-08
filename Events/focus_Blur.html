@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocFocus and Blurument</title>
+</head>
+<body>
+  
+  <h1>Focus and Blur Method</h1>
+
+  <button type="button" id="btn1">new window</button>
+  <button type="button" id="btn2">Focus</button>
+  <button type="button" id="btn3"> Blur</button>
+  <button type="button" id="btn4">Close</button>
+
+
+  <script>
+    function openWin(){
+      newWindow = window.open("","_blank","width = 300, height=200")
+    }
+    function focusWin(){
+      newWindow.focus();
+    }
+    function blurWin(){
+      newWindow.blur();
+    }
+    function closeWin(){
+      newWindow.close()
+    }
+
+
+    // access Button
+
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let btn3= document.getElementById("btn3");
+    let btn4= document.getElementById("btn4");
+
+
+    // addEventListener
+    btn1.addEventListener("click",openWin);
+    btn2.addEventListener("click",focusWin);
+    btn3.addEventListener("click",blurWin)
+    btn4.addEventListener("click",closeWin)
+
+  </script>
+</body>
+</html>
