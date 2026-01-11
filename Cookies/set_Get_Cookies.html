@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set & Get Cookies</title>
+  </head>
+  <body>
+    <form action="" name="myForm">
+      Name:<input type="text" name="myName" id="nameid" /><br />
+      Email: <input type="email" name="myEmail" id="emailid" /><br />
+      Language: <input type="text" name="myLang" id="langid" /><br /><br />
+      <input type="button" name="mySet" value="Set Cookies" id="setCookie" />
+      <input type="button" name="myGet" value="Get Cookies" id="getCookie" />
+    </form>
+
+    <script>
+      //Accesing ELements
+      let nameValue = document.myForm.elements["myName"];
+      let emailValue = document.myForm.elements["myEmail"];
+      let langValue = document.myForm.elements["myLang"];
+      let setCookies = document.myForm.elements["mySet"];
+      let getCookies = document.myForm.elements["myGet"];
+
+
+      //Function for set Cookies
+
+      function setCookie() {
+        document.cookie = "name=" + nameValue.value;
+        document.cookie = "email=" + emailValue.value;
+        document.cookie = "language=" + langValue.value;
+        console.log("Cookies Set:", document.cookie);
+    alert("Cookies set successfully!");
+      }
+
+      //get Cookie
+
+      function getCookie(){
+      let cookieArray = document.cookie.split(";")
+
+      for(let i =0; i<cookieArray.length;i++){
+        let valueArr = cookieArray[i].split("=");
+
+
+       if(valueArr[0]==='name'){
+       nameValue.value =valueArr[1]
+       }else if(valueArr[0]===' email'){
+       emailValue.value =valueArr[1]
+       }else if(valueArr[0]===' language'){
+       langValue.value =valueArr[1]
+       }
+        console.log(valueArr[0])
+         //console.log(cookieArray[i])
+      }
+     
+        alert("STored cookies:"+document.cookie)
+      }
+      //alert(document.cookie)
+       setCookies.addEventListener('click', setCookie);
+       getCookies.addEventListener('click', getCookie);
+
+       
+
+    </script>
+  </body>
+</html>

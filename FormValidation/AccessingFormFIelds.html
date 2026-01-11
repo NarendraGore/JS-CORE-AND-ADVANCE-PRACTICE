@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing Form Fields</title>
+  </head>
+  <body>
+    <form action="" name="my_Form" id="myid">
+      Username: <input type="text" name="mUsername" id="uname" /><br /><br />
+      Password: <input type="password" name="mPassword" id="pass" /><br /><br />
+      <button type="button" name="mBtn" id="sbtn">Submit</button><br /><br />
+    </form>
+    <hr />
+    <hr />
+
+    <script>
+      //Accessing Form Fields
+      //By index
+      let mform = document.my_Form.elements[0];
+      console.log(mform);
+
+      //By name_attribute_value
+      let mform1 = document.my_Form.elements["mPassword"];
+      console.log(mform1);
+      //By direct name_attribute_value
+
+      let mform2 = document.my_Form.mPassword;
+      console.log(mform2);
+
+      //By direct ID_attribute_value
+      let mform3 = document.my_Form.mUsername;
+      console.log(mform3);
+
+      //By direct ID
+      let mform4 = document.getElementsByName("mUsername");
+      console.log(mform4);
+      console.log(mform3.value)
+      mform3.value="XYZ"
+    </script>
+  </body>
+</html>

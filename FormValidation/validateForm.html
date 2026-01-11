@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validate Form</title>
+</head>
+<body>
+    <form action="" name="my_Form" id="myid">
+      Username: <input type="text" name="mUsername" id="uname" /><br /><small id="restrictText"></small><br />
+      Password: <input type="password" name="mPassword" id="pass" /><br /><small id="passmsg"></small><br />
+      <button type="button" name="mBtn" id="sbtn">Submit</button><br /><br />
+    </form>
+    <hr />
+    <hr />
+
+    <script>
+      //Form Validation
+      const pattern = /^[A-Za-z]+$/;
+      const passPattern = /^[A-Za-z0-9]{6,}$/;
+
+      let userName = document.my_Form.elements['mUsername'];
+      let passWord = document.my_Form.elements['mPassword'];
+      let passMsg = document.getElementById("passmsg")
+
+     function validatedata(){
+       if(pattern.test(userName.value)){
+        document.getElementById('restrictText').textContent = "User is valid";
+        document.getElementById('restrictText').style.color="green"
+      }else{
+           document.getElementById('restrictText').textContent = "User is not valid";
+        document.getElementById('restrictText').style.color="red"
+      }
+      console.log(userName)
+
+     }
+
+     function passCheck(){
+      if(passPattern.test(passWord.value)){
+        passMsg.textContent = "Valid Password";
+        passMsg.style.color="green"
+      }else{
+        passMsg.textContent="Invalid PassWord";
+        passMsg.style.color="red"
+      }
+     }
+
+
+     userName.addEventListener("blur",validatedata)
+     passWord.addEventListener("blur", passCheck)
+    </script>
+</body>
+</html>

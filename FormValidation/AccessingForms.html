@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing Forms</title>
+  </head>
+  <body>
+    <br /><br />
+    <form action="" name="my_Form" id="myid">
+      Username: <input type="text" name="mUsername" /><br /><br />
+      Password: <input type="password" name="mPassword" /><br /><br />
+      <button type="button" name="mBtn">Submit</button><br /><br />
+    </form>
+    <hr />
+    <hr />
+    <br /><br />
+    <form action="" name="your_Form" id="yourid">
+      Username: <input type="text" name="yUsername" /><br /><br />
+      Passowrd: <input type="password" name="yPassword" /><br /><br />
+      <button type="submit" name="yBtn">Submit</button><br /><br />
+    </form>
+
+    <script>
+      //Accessing Forms
+      //By Using index numbers
+      let mform = document.forms[0];
+      console.log(mform);
+
+      let yform = document.forms[1];
+      console.log(yform);
+
+      //By Using attribute value
+      let mform1 = document.forms["my_Form"];
+      console.log(mform1);
+
+      let yform1 = document.forms["your_Form"];
+      console.log(yform1);
+
+      //By using direct attribute value
+
+      let mform3 = document.my_Form;
+      console.log(mform3);
+
+      let yform3 = document.your_Form;
+      console.log(yform3);
+
+      //byUsing ID
+
+      let mform4 = document.getElementById('myid');
+      console.log(mform4);
+
+      let yform4 = document.getElementById('yourid');
+      console.log(yform4);
+    </script>
+  </body>
+</html>
